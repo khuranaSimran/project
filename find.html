@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+<style>
+.my-nav
+{
+width:1560px;
+height:50px;
+background-color:#dad5d5;
+padding:7px;
+}
+
+.my-sec
+{
+ width:1560px;
+ height:1250px;
+ background: white;
+}
+
+.my-foot
+{
+width:1560px;
+height:100px;
+background-color:#dad5d5;
+}
+
+h1{
+
+text-align:center;}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+        <div style="overflow-y:auto;overflow-x:hidden">
+		<header class="my-nav" ng-controller="ctrl">
+			<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+					<center> <b> <label style="font-size:30px;">SMART RIDES </label> </b> </center>
+				</div>
+				<div class="col-md-4 col-md-offset-6">
+					<button class="btn btn-primary col-md-3" ng-click="onOffer()"> OFFER RIDE </button>
+					<button class="btn btn-primary col-md-3 col-md-offset-2" ng-click="onRide()"> FIND RIDE </button>
+				</div>
+				
+			</div>
+			</div>
+		</header>
+		
+		
+        <section class="my-sec">
+		<br>
+		<br>
+		  <div class="container">
+		  <br>
+		  <div class="row">
+		  <div class="col-md-2 ">
+		  <a href="#!/su" style="font-size:25px;"> <i class="fa fa-user-plus" aria-hidden="true" ></i>SIGN UP</a>
+		  </div> 
+		  <div class="col-md-2">
+		  <a href="#!/li" style="font-size:25px;"> <i class="fa fa-sign-in" aria-hidden="true"></i> LOGIN </a>
+		  </div>
+		  </div>
+		  
+		  <br>
+		  <br>
+		  <br>
+		  
+		  <form>
+		  
+		  <div class="form-group">
+		  <div class="row">
+		  <div class="col-md-4 col-md-offset-5">
+				<label style="font-size:30px;">FIND RIDE </label>
+		  </div>
+		  </div>
+		  </div>
+		
+        
+                <div class ="form-group">
+				<div class="row">
+				<div class="col-md-3">
+                    <label style="font-size:20px;"><i class="fa fa-map-marker" aria-hidden="true" style="font-size:30px;"></i>&nbsp;TRAVEL</label>
+				</div>
+				</div>
+                </div>
+				
+				<br>
+				<br>
+				
+				<div class="form-group">
+                <div class="row">
+                <div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;"></i>&nbsp;LEAVING FROM</label>
+				</div>
+				<div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;"></i>&nbsp;GOING TO</label>
+				</div>
+				</div>
+				<div class="row">
+                    <div class="col-md-6"><input type="text" class="form-control">
+					</div>
+					<div class="col-md-6"><input type="text" class="form-control">
+					</div>
+                </div>
+				</div>
+				
+				
+                
+                <div class="form-group">     
+				<div class="row">
+                <div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-calendar" aria-hidden="true" style="font-size:20px;"></i>&nbsp;DATE</label>
+				</div>
+				<div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-calendar" aria-hidden="true" style="font-size:20px;"></i>&nbsp;TIME</label>
+				</div>
+				</div>
+				</div>
+				
+				
+				<div class="row">
+                    <div class="col-md-6">
+                    <input type="date" class="form-control">
+					</div>
+					<div class="col-md-6">
+                    <input type="time" class="form-control">
+					</div>
+                </div>
+				
+				<br>
+				<br>
+				
+				<div class="form-group">
+                <div class= "row">
+				<button type = "submit" class= "btn btn-success col-md-2 col-md-offset-5"><i class="fa fa-car" aria-hidden="true"></i>&nbsp;FIND</button>
+                </div>
+				</div>
+                </form>
+            
+        
+        </div>
+        </section>
+		
+	
+	<footer class="my-foot">
+		<div class="container-fluid">
+			<br>
+			<br>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-1 col-md-offset-1"><a href="" > ABOUT US </a>
+						<br>
+						
+						</div>
+						<div class="col-md-1 col-md-offset-7"><a href="#!/con" > CONTACT </a> 
+						
+						</div>
+						</div>
+					</div>
+		</div>
+	</footer>
+	
+	
+     </div>
+    </body>
+</html>

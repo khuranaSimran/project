@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+        
+    </head>
+    
+    <body>
+        <header>
+        
+        </header>
+        <section>
+            <div class="container">
+                <br><br>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <label><i class="fa fa-user" aria-hidden="true"></i>&nbsp;NAME</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <input type="text" class="form-control" placeholder="NAME" name="name" ng-model="fm.name" minlength="5" pattern="^([A-Z][a-z]*[\s]?)+$" required >
+                        </div>
+                    </div>
+                
+                <div class="row">
+						<div class="col-md-5 col-md-offset-3">
+						<span ng-show="objForm.name.$touched || objForm.$submitted" class="help-message"  ng-messages="objForm.name.$error">
+						<span ng-message="required"> Name is required.</span>
+						<span ng-message="minlength">Length should be atleast 5.</span>
+						<span ng-message="pattern"> Start with capital letter .</span>
+						</span>
+						</div>
+                    </div>
+                </div>
+                
+                 <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <label><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;E-MAIL</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <input type="text" class="form-control" placeholder="E-MAIL" name="email" ng-model="fm.email" pattern="^[a-z|0-9]*[@][a-z]*[.][a-z]*$" required >
+						</div>
+                     </div>
+						<div class="row">
+						<div class="col-md-5 col-md-offset-3">
+						<span ng-show="objForm.email.$touched || objForm.$submitted" class="help-message"  ng-messages="objForm.email.$error">
+						<span ng-message="required">Email is required.</span>
+						<span ng-message="pattern">Contain @ symbol.</span>
+						</span>
+						</div>
+						</div>
+                </div>
+				<div class="form-group">
+						<div class="row">
+						<div class="col-md-5 col-md-offset-3"> <label><i class="fa fa-phone" aria-hidden="true"></i> PHONE-NO:</label> </div>
+						</div>
+						<div class="row">
+						<div class="col-md-5 col-md-offset-3"> <input type="text" class="form-control" minlength="10" maxlength="10" name="phno" ng-model="fm.phno" pattern="^[789][0-9]*$" required> </div>
+						</div>
+						<div class="row">
+						<div class="col-md-9 col-md-offset-2">
+						<span ng-show="objForm.phno.$touched || objForm.$submitted" class="help-message"  ng-messages="objForm.phno.$error" >
+						<span ng-message="required"> Phone No is required.</span>
+						<span ng-message="minlength">Length should be atleast 10.</span>
+						<span ng-message="manlength">Length should be atleast 10.</span>
+						<span ng-message="pattern"> Should start with 7,8 or 9.</span>
+						</span>
+						</div>
+						</div>
+					</div>	
+                
+                <!--<div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <label><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;PASSWORD</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            <input type="text" class="form-control" placeholder="PASSWORD" name="password" ng-model="fm.password" required minlength="7" pattern= "^[a-z|A-Z|0-9]*[0-9]*$" >
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-5 col-md-offset-3">
+					<span ng-show="objForm.password.$touched || objForm.$submitted" class="help-message" ng-messages="objForm.password.$error">
+				    <span ng-message="required">Password  is required.</span>
+					<span ng-message="minlength">Length should be atleast 7 </span>
+                    <span ng-message="pattern">Enter password that ends with any number</span></span>
+					</div>
+					</div>
+                </div>-->
+				
+				<button > Submit </button>
+            </div>
+        </section>
+        <footer>
+        
+        </footer>
+    </body>
+</html>

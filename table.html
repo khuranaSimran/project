@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html ng-app="myapp">
+
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">  
+	   
+	 
+
+</head>
+
+<style>
+
+table,th,td
+{
+border: 2px solid black;
+    border-collapse: collapse;
+	width:200px;
+	
+}
+
+th, td {
+    padding:30px;
+}
+
+
+</style>
+<body>
+
+<thead>
+
+
+</thead>
+
+
+<tbody>
+<div class="container">
+<br>
+<br>
+<div class="col-md-7 col-md-offset-2" ng-controller="control">
+<table>
+<tr>
+<th> SR.NO </th>
+<th> NAME </th>
+<th> PHONE</th>
+<th>EMAIL </th>
+<th>UPDATE </th>
+</tr>
+
+
+<tr ng-repeat="co in contact"> 
+<td> {{$index+1}}</td>
+<td> {{co.name}}</td>
+<td>{{co.phno}} </td>
+<td>{{co.email}} </td>
+<td> <button ng-click="onUp(co._id)"> UPDATE  </button></td>
+</tr>
+
+</table>
+</div>
+</div>
+</tbody>
+
+<tfoot>
+</tfoot>
+
+
+<script src="angular_files/angular.min.js"> </script>
+<script src="angular_files/angular-route.min.js"> </script>
+<script src="angular_files/angularjsmessages.min.js"> </script>
+<script src="angular_files/app.js"> </script>
+</body>
+
+</html>

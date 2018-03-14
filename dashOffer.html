@@ -1,0 +1,61 @@
+<div class="container" ng-controller="dash">
+	<br><br>
+	<center><h1 style="color:silver;font-size:50px;"> OFFER RIDE </h1></center>
+		<br>
+            <form name="offerForm" ng-submit="myOffer();">
+				<br>		
+				<br>
+				<br>
+				
+				<div class="form-group">
+                	<div class="row">
+                		<div class="col-md-6">
+                    		<label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;"></i>&nbsp;LEAVING FROM</label>
+						</div>
+						<div class="col-md-6">
+                    		<label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;" ></i>&nbsp;GOING TO</label>
+						</div>
+					</div>
+				
+				<div class="row">
+                    <div class="col-md-6"><input type="text" class="form-control" ng-model="offerData1.name" placeholder="Delhi">
+					</div>
+					<div class="col-md-6"><input type="text" class="form-control" ng-model="offerData1.phno" placeholder="Panipat">
+					</div>
+                </div>
+				</div>
+				
+				
+                
+                <div class="form-group">     
+				<div class="row">
+                <div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-calendar" aria-hidden="true" style="font-size:20px;"></i>&nbsp;DATE</label>
+				</div>
+				<div class="col-md-6">
+                    <label style="font-size:20px;"><i class="fa fa-calendar" aria-hidden="true" style="font-size:20px;"></i>&nbsp;TIME</label>
+				</div>
+				</div>
+				
+				<div class="row">
+                    <div class="col-md-6">
+                   	 <input type="text" class="form-control" ng-model="offerData2.name" placeholder="dd/mm/yy" >
+					</div>
+					
+					<div class="col-md-6">
+                   	 <input type="" class="form-control" ng-model="offerData2.phno" placeholder="--:--" >
+					</div>
+                </div>
+                </div>
+				
+				<br>
+				<br>
+				
+				
+				<div class="form-group">
+               	 <div class= "row">
+					<button class= "btn btn-success col-md-2 col-md-offset-5" ><i class="fa fa-car" aria-hidden="true"></i>&nbsp;OFFER </button>
+                </div>
+				</div>
+                </form>
+</div>

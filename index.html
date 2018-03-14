@@ -1,0 +1,278 @@
+<!doctype html>
+<html ng-app="myapp">
+<head>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+<style>
+	.dash-icon{
+		font-size:30px;
+		text-align:center;
+	}
+	.dash-icon:hover{
+		color:white;
+		cursor:pointer;
+	}
+	.left-dash{
+		border-radius:5px;
+		border:0.5px solid black;
+		background:silver;
+		box-shadow:0px 0px 2px black;
+		font-size:15px;
+		overflow:hidden;
+	}
+	.col-md-3.left-dash{
+		margin-left:10px;
+	}
+	.col-md-8.right-dash{
+		margin-left:50px;
+	}
+	.right-dash{
+		min-height:550px;
+		border-radius:5px;
+		border:0.5px solid black;
+		background:silver;
+		box-shadow:0px 0px 2px black;
+		font-size:13px;
+		overflow:hidden;
+		padding:20px;
+	}
+	.left-bar-contents{
+		padding:20px;
+	}
+.left-bar-contents:hover{
+	background:#222222;
+	color:white;
+	cursor:pointer;
+	border-left:4px solid white;
+}
+
+.left-bar-contents.active{
+	background:#222222;
+	color:white;
+	cursor:pointer;
+	border-left:4px solid white;
+}
+.my-nav
+{
+width:100%;
+min-height:50px;
+background-color:#dad5d5;
+padding:7px;
+z-index:100;
+border-bottom:1px solid grey;
+box-shadow:0px 1px 3px black;
+}
+
+.my-sec
+{
+ width:100%;
+ min-height:700px; 
+}
+
+.ABC
+{
+padding:30px 30px; 
+background:rgba(250,250,250,0.7);
+border-radius:5px;
+overflow:hidden;
+border:1px solid grey;
+box-shadow:5px 5px 10px grey;
+}
+
+.my-foot
+{
+width:100%;
+height:100px;
+background:#dad5d5;
+border-top:1px solid grey;
+}
+
+.mySlides{
+height:350px;
+}
+
+	.form-design{
+		background:silver;
+		padding:20px 20px 20px 20px;
+		border:1px solid black;
+		border-radius:10px;
+		box-shadow:0px 0px 5px black;
+	}
+	input.ng-invalid.ng-touched, .ng-submitted input.ng-invalid{
+		border: 1px solid red;
+	}
+	input.ng-valid.ng-touched{
+		border: 1px solid green;
+	}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+	.dash-drop-down{
+		position:absolute;
+		width:0px;
+		height:0px;
+		border:1px solid black;
+		top:55px;
+		right:42px;
+		z-index:50;
+		background:silver;
+		box-shadow:5px 5px 15px black;
+		border-radius:5px;
+		overflow:hidden;
+		transition:all 0.5s;
+	}
+	.dash-drop-down-list{
+		padding:20px;
+		list-style-type:none;
+		font-size:20px;
+	}
+	.dash-drop-down-list:hover{
+		background:black;
+		color:white;
+		cursor:pointer;
+		border-left:5px solid white;
+	}
+	body{
+		background-image:url('back2.jpg');
+		background-attachment:fixed;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+	.data-table,.data-table th,.data-table td,.data-table tr{
+	border:0.5px solid rgb(53,61,93);
+	border-collapse:collapse;
+	padding:5px;
+	text-align:center;
+	}
+	.data-table{
+	width:100%;
+	background:rgba(53,61,93,0.2);
+	}
+	.data-table thead{
+	background:rgba(53,61,93,1);
+	color:silver;
+	font-size:25px;
+	}
+	.data-table tbody{
+	font-size:20px;
+	color:silver;
+	}
+	
+</style>
+</head>
+<body>
+	
+	<header class="my-nav" ng-controller="ctrl" ng-switch on="navBar">
+		<div class="container-fluid" ng-switch-when="homeNav">
+			<div class="row">
+				<div class="col-md-4">
+					<center> <b> <label style="font-size:30px;">SMART RIDES</label> </b> </center>
+				</div>
+				<div class="col-md-2 col-md-offset-4" >
+					<button class="btn btn-primary btn-block" ng-click="onOffer()" style="margin-top: 5px;"> OFFER RIDE </button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-primary btn-block" ng-click="onOffer()" style="margin-top: 5px;"> FIND RIDE </button>
+				</div>
+	
+			</div>
+		</div>
+		<div class="container-fluid" ng-switch-when="dashNav">
+			<div class="row">
+				<div class="col-md-4">
+					<center> <b> <label style="font-size:30px;">SMART RIDES</label> </b> </center>
+				</div>
+				<div class="col-md-2 col-md-offset-1" >
+					<button class="btn btn-primary btn-block" ng-click="onOffer2()" style="margin-top: 5px;"> OFFER RIDE </button>
+				</div>
+				<div class="col-md-2">
+					<button class="btn btn-primary btn-block" ng-click="onRide2()" style="margin-top: 5px;"> FIND RIDE </button>
+				</div>
+				<div class="col-md-1 dash-icon">
+					<i class="fa fa-home" aria-hidden="true" ng-click="dashHome()"></i>
+				</div>
+				<div class="col-md-1 dash-icon">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+				</div>
+				<div class="col-md-1 dash-icon" style="position:relative">
+					<i class="fa fa-user-circle" aria-hidden="true" onclick="dropMe()"></i>
+					<div class="dash-drop-down">
+					
+						<li class="dash-drop-down-list">Settings</li>
+						<li class="dash-drop-down-list" ng-click="myLogout()">Logout</li>
+					
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+
+	<section class="my-sec" ng-view>
+		</section>
+
+<footer class="my-foot">
+		<div class="container-fluid">
+			<br>
+			<br>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-1 col-md-offset-1"><a href="" > ABOUT US </a>
+						<br>
+						
+						</div>
+						<div class="col-md-1 col-md-offset-7"><a href="#!/con" > CONTACT </a> 
+						
+						</div>
+						</div>
+					</div>
+		</div>
+	</footer>
+<script>
+		var dropMe=function(){
+			console.log("drop me");
+			var a=document.querySelector('.dash-drop-down').style;
+			if(a.width=='200px'){
+				a.width='0px';
+				a.height='0px';
+			}
+			else{
+				a.width='200px';
+				a.height='inherit';
+			}
+		}
+	</script>
+<script src="angular_files/angular.min.js"> </script>
+<script src="angular_files/angular-route.min.js"> </script>
+<script src="angular_files/angularjsmessages.min.js"> </script>
+<script src="angular_files/app.js"> </script>
+	
+</body>
+</html>

@@ -1,0 +1,74 @@
+<div class="container" ng-controller="dash">
+	<br><br>
+	<center><h1 style="color:silver;font-size:50px;"> FIND YOUR RIDE HERE ! </h1></center>
+		<br>
+            <form name="offerForm" ng-submit="myfind()">
+				<br>		
+				<br>
+				<br>
+				
+				<div class="form-group">
+                	<div class="row">
+                		<div class="col-md-6">
+                    		<label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;"></i>&nbsp;LEAVING FROM</label>
+						</div>
+						<div class="col-md-6">
+                    		<label style="font-size:20px;"><i class="fa fa-circle-o" aria-hidden="true" style="font-size:20px;" ></i>&nbsp;GOING TO</label>
+						</div>
+					</div>
+				
+				<div class="row">
+                    <div class="col-md-6"><input type="text" class="form-control" ng-model="offerData.name" placeholder="Delhi">
+					</div>
+					<div class="col-md-6"><input type="text" class="form-control" ng-model="offerData.phno" placeholder="Panipat">
+					</div>
+                </div>
+				</div>
+				
+				
+                
+                <div class="form-group">     
+				
+				<div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                   	 <label><h4>Travel Date : </h4></label>
+					</div>
+					
+					<div class="col-md-4">
+                   	 <input type="" class="form-control" ng-model="offerData.address" placeholder="12/12/12" >
+					</div>
+                </div>
+                </div>
+				
+				<br>
+				<br>
+				
+				
+				<div class="form-group">
+               	 <div class= "row">
+					<button class= "btn btn-success col-md-2 col-md-offset-5" ><i class="fa fa-car" aria-hidden="true"></i>&nbsp;SHOW RIDES </button>
+                </div>
+				</div>
+                </form>
+		<br>
+	<div class="row">
+		<center><h2>Available Rides Below :</h2></center>
+	</div>
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<table class="data-table">
+						<thead>
+							<th>Ride.no. </th>
+							<th> Car Owner Name </th>
+							<th> Car Owner Contact Number </th>
+						</thead>
+						<tbody ng-repeat="ride in myrides">
+							<td>{{$index+1}}</td>
+							<td>{{ride.name}}</td>
+							<td>{{ride.phno}}</td>
+						</tbody>
+					</table>
+		</div>
+	</div>
+	
+</div>
